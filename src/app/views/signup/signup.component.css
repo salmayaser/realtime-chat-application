@@ -1,0 +1,43 @@
+
+
+.centered-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.centered-content .logo{
+  text-align: center;
+}
+.centered-content img {
+  height: 30px;
+  margin: 30px auto;
+  text-align: center;
+
+}
+.centered-content h4{
+  text-align: center;
+}
+.centered-content p{
+  font-size:14px ;
+  color: #9aa1b9!important;
+  margin: 10px;
+  text-align: center;
+}
+.signin-form{
+  background-color: #2d353f;
+  padding: 30px 40px;
+}
+.signin-form input{
+  width: 100%;
+}
+.signin-form .form-group{
+  margin: 20px 0px;
+}
+.signin-button{
+  width: 100%;
+}
+
+a{
+  color: #c298d8;
+}

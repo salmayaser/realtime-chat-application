@@ -1,0 +1,46 @@
+<div class="chat-container">
+
+  <div *ngIf="chat==null" class="null-chat">
+    <div>Please Choose a Conversation</div>
+  </div>
+
+
+
+
+
+  <div class="card" *ngIf="chat !=null">
+    <div class="card-header">
+      <h5>{{author}}</h5>
+    </div>
+    <div class="card-body" #chatContainer>
+      <div class="centered-content" *ngIf="loader">
+        <app-loader></app-loader>
+      </div>
+      <div *ngIf="!loader">
+        <div *ngFor="let c of chat" [ngClass]="{rtl:c.author!==username}" class="cont">
+          <h6>{{c.author}}</h6>
+          <div class="message" [ngClass]="{gray:c.author!==username}">
+            <p>{{c.message}}</p>
+          </div>
+          <span class="time">{{c.date|dateFormat}}</span>
+        </div>
+
+      </div>
+
+
+    </div>
+
+    <div class="card-footer">
+      <div class="row">
+        <div class="col-10">
+          <textarea (keyUp.enter)="sendMessage()" [rows]="3" [cols]="30" pInputTextarea autoResize="autoResize"
+            class="send-input" [(ngModel)]='message' name="message"></textarea>
+        </div>
+        <div class="col-2 d-flex align-items-center">
+          <button pButton pRipple type="button" label="send" class="signin-button" [disabled]="message==''"
+            (click)='sendMessage()'></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

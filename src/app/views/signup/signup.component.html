@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="centered-content">
+    <div *ngIf="loader">
+      <app-loader></app-loader>
+    </div>
+    <div class="content" *ngIf="!loader">
+      <div class="logo"><img src="../../../assets/logo.png"></div>
+
+      <h4>Sign Up </h4>
+      <p>Sign up to continue to Chatvia.</p>
+      <div class="signin-form card-body">
+        <form #signupForm=ngForm (ngSubmit)="signIn(signupForm.value)">
+          <div class="alert alert-danger text-center" style="font-size: 14px;" *ngIf="error">
+            {{error}}
+          </div>
+          <div class="form-group">
+            <label>Username</label>
+            <div class="p-inputgroup">
+              <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+              <input type="text" pInputText name="username" #username required ngModel>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Password</label>
+            <div class="p-inputgroup">
+              <span class="p-inputgroup-addon"><i class="pi pi-lock"></i></span>
+              <input type="password" pInputText name="password" #password required minlength="5" ngModel>
+            </div>
+          </div>
+
+          <button pButton pRipple type="submit" label="Sign up" class="signin-button"
+            [disabled]='!signupForm.valid'></button>
+        </form>
+      </div>
+
+      <p>already have an account ? <a routerLink="/signin">Signin now</a></p>
+    </div>
+
+
+  </div>
+</div>

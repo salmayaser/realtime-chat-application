@@ -1,0 +1,78 @@
+.chat-container{
+  height: 100vh;
+  background-color: #262e35;
+  position: relative;
+}
+.card{
+  height: 100vh;
+  background-color: transparent;
+}
+.card-body{
+  overflow: auto;
+}
+
+.send-input{
+  width: 100%;
+}
+
+.message{
+  min-height: 40px;
+  padding: 20px;
+  /* margin: 15px; */
+  /* width: 500px; */
+  /* display: flex;
+  align-items: center; */
+  background-color: #a890d8;
+  text-align: start;
+}
+
+.gray{
+  background-color: #36404a;
+  /* text-align: start;
+  float: right; */
+
+}
+.rtl{
+  text-align: end;
+}
+.rtl .time{
+  direction: ltr;
+}
+.cont{
+  margin: 15px;
+}
+.time{
+  color: gray;
+  font-size: 14px;
+}
+
+.null-chat{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 20px;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #36404a;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #a890d8;
+}
+.centered-content{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+

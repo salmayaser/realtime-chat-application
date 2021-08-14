@@ -1,0 +1,41 @@
+
+.chats-container{
+  background-color: #303841;
+  overflow: auto;
+  padding: 40px 0px;
+}
+
+.list-group-item{
+  background-color: transparent;
+  color:#dae9f1 ;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px;
+}
+.list-group-item .chat-information{
+  color: gray;
+}
+.chat-information span{
+  display: block;
+  text-align: right;
+}
+.chat-time{
+  font-size: 12px;
+}
+a{
+  color: #fff !important;
+}
+.chats-header{
+  display: flex;
+  justify-content: space-between;
+}
+.chats-header i{
+  cursor: pointer;
+
+}
+.chats-header i:hover{
+  color: #c298d8;
+}
+.all-users{
+  overflow: hidden;
+}

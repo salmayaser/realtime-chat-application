@@ -1,0 +1,31 @@
+<div class="chats-container">
+  <div class="chats-header mb-5">
+    <h3>Chats</h3>
+    <i class="pi pi-sign-out" (click)='logout()'></i>
+  </div>
+
+  <ul class="list-group" *ngIf="conversations">
+
+
+    <li class="list-group-item" *ngFor="let conversation of conversations">
+      <a
+        routerLink='/home/{{conversation._id}}'>{{conversation.userOne==username?conversation.userTwo:conversation.userOne}}</a>
+      <div class=" chat-information">
+        <span (click)="delete(conversation._id)"><i class="pi pi-times "
+            style="color: #c298d8; cursor: pointer;"></i></span>
+        <span class="chat-time">{{conversation.date|dateFormat}}</span>
+      </div>
+    </li>
+  </ul>
+  <!-- <h6 class="mt-5">All Users</h6>
+  <ul class="list-group all-users">
+    <li class="list-group-item" *ngFor="let user of users">
+
+      <span>{{user}}</span>
+      <div class=" chat-information">
+        <button pButton pRipple type="button" label="send Message"></button>
+      </div>
+
+    </li>
+  </ul> -->
+</div>
